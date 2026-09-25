@@ -168,7 +168,6 @@ public class Data {
                 Unit unit = new Unit(unit_code, unit_name, number_of_students, new ArrayList<Lecturer>(Arrays.asList(lecturer)));
                 unitsList.addAll(unit);
                 units = new ArrayList<Unit>(unitsList);
-
                 //COURSES
                 String department = resultSet_units.getString("Department");
                 String course_code = resultSet_units.getString("Course_Code");
