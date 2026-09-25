@@ -23,8 +23,16 @@ public class Database_Handler {
 
     void Create_Connection() {
         try {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-            connection = DriverManager.getConnection("jdbc:mysql://127.0.01:3306/actgdb", "root", "root");
+//            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Class.forName("org.postgresql.Driver").newInstance();
+
+//            connection = DriverManager.getConnection("jdbc:mysql://127.0.01:3306/actgdb", "root", "root");
+            connection = DriverManager.getConnection(
+                    "jdbc:postgresql://127.0.0.1:5432/actg",
+                    "postgres",
+                    "bugatti"
+            );
+
             System.out.println("Database Connection Successful");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
