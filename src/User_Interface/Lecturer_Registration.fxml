@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="655.0" prefWidth="411.0" style="-fx-background-color: #333;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Lecturer_Registration_Controller">
+   <children>
+      <VBox layoutX="118.0" layoutY="102.0" prefHeight="488.0" prefWidth="365.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="131.0" prefWidth="375.0">
+                     <children>
+                        <ImageView fx:id="imageview_photo" fitHeight="120.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/User.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="52.0" prefWidth="375.0" spacing="10.0">
+                     <children>
+                        <JFXButton fx:id="button_take_photo" buttonType="RAISED" onAction="#take_photo" prefHeight="28.0" prefWidth="92.0" style="-fx-background-color: crimson;" text="Take Photo" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="button_upload_photo" buttonType="RAISED" layoutX="152.0" layoutY="11.0" onAction="#upload_photo" prefHeight="28.0" prefWidth="124.0" style="-fx-background-color: crimson;" text="Upload Photo" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="button_choose_avator" buttonType="RAISED" layoutX="198.0" layoutY="11.0" onAction="#choose_avator" prefHeight="28.0" prefWidth="114.0" style="-fx-background-color: crimson;" text="Choose avatar" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <GridPane alignment="CENTER" prefHeight="399.0" prefWidth="417.0" VBox.vgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <JFXTextField fx:id="textfield_full_name" focusColor="WHITE" labelFloat="true" promptText="Full Name" style="-fx-text-fill: #FFF;" unFocusColor="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textfiled_email" focusColor="WHITE" labelFloat="true" promptText="Email" style="-fx-text-fill: #FFF;" unFocusColor="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textfield_reg_number" focusColor="WHITE" labelFloat="true" promptText="Registration Number" style="-fx-text-fill: #FFF;" unFocusColor="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textfield_username" focusColor="WHITE" labelFloat="true" promptText="Username" style="-fx-text-fill: #FFF;" unFocusColor="WHITE" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="password_field_choose" focusColor="WHITE" labelFloat="true" promptText="Choose Password (8 characters)" style="-fx-text-fill: #FFF;" unFocusColor="WHITE" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXPasswordField fx:id="password_field_confirm" focusColor="WHITE" labelFloat="true" promptText="Confirm Password" style="-fx-text-fill: #FFF;" unFocusColor="WHITE" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXTextField fx:id="textfield_password_hint" focusColor="WHITE" labelFloat="true" layoutX="20.0" layoutY="181.0" promptText="Password Hint" style="-fx-text-fill: #FFF;" unFocusColor="WHITE" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </GridPane>
+            <HBox alignment="CENTER" prefHeight="47.0" prefWidth="375.0">
+               <children>
+                  <JFXButton fx:id="button_sign_up" buttonType="RAISED" onAction="#sign_up" prefHeight="41.0" prefWidth="114.0" style="-fx-background-color: #4caf50;" text="SIGN UP" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

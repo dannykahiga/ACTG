@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderpane_main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="876.0" style="-fx-background-color: #333;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Login_Window_Controller">
+   <left>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="228.0" style="-fx-background-color: #1864a0;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Account Type" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Pane fx:id="pane_admin" prefHeight="171.0" prefWidth="14.0" style="-fx-background-color: #4caf50;" visible="false" />
+                  <JFXButton fx:id="button_admin" contentDisplay="TOP" onAction="#admin_login_page" prefHeight="165.0" prefWidth="223.0" ripplerFill="#1864a0" text="Administrator" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="119.0" fitWidth="139.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/User.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Pane fx:id="pane_lecturer" prefHeight="171.0" prefWidth="14.0" style="-fx-background-color: #4caf50;" visible="false" />
+                  <JFXButton fx:id="button_lecturer" contentDisplay="TOP" onAction="#lecturer_login_page" prefHeight="165.0" prefWidth="223.0" ripplerFill="#1864a0" text="Lecturer" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="119.0" fitWidth="139.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/User.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Pane fx:id="pane_student" prefHeight="171.0" prefWidth="14.0" style="-fx-background-color: #4caf50;" visible="false" />
+                  <JFXButton fx:id="button_student" contentDisplay="TOP" onAction="#student_login_page" prefHeight="165.0" prefWidth="223.0" ripplerFill="#1864a0" text="Student" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="119.0" fitWidth="139.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/User.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="30.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <JFXSpinner radius="0.0" startingAngle="321.95759511196695">
+               <children>
+                  <JFXSpinner>
+                     <children>
+                        <JFXSpinner radius="16.0">
+                           <children>
+                              <JFXSpinner radius="20.0">
+                                 <children>
+                                    <JFXSpinner radius="24.0">
+                                       <children>
+                                          <JFXSpinner radius="28.0" />
+                                       </children>
+                                    </JFXSpinner>
+                                 </children>
+                              </JFXSpinner>
+                           </children>
+                        </JFXSpinner>
+                     </children>
+                  </JFXSpinner>
+               </children>
+            </JFXSpinner>
+            <Label text="Waiting For User To Select Account Type..." textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="56.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <JFXToolbar prefHeight="36.0" prefWidth="714.0" BorderPane.alignment="CENTER">
+         <center>
+            <Label text="Automatic College Timetable Generator(ACTG)" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </center>
+      </JFXToolbar>
+   </top>
+</BorderPane>

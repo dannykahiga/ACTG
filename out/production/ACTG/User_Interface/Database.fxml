@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="396.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DatabaseController">
+    <children>
+        <StackPane fx:id="stackpane_parent" layoutY="152.0" prefHeight="396.0" prefWidth="860.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <FlowPane alignment="CENTER" hgap="10.0" prefHeight="471.0" prefWidth="860.0" vgap="10.0">
+                    <children>
+                        <JFXButton fx:id="button_departments" buttonType="RAISED" contentDisplay="TOP" onAction="#show_current_departments" prefHeight="131.0" prefWidth="244.0" style="-fx-background-color: #9c27b0;" text="Current Departments" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="57.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/Department.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="button_classrooms" buttonType="RAISED" contentDisplay="TOP" layoutX="188.0" layoutY="145.0" onAction="#show_current_classrooms" prefHeight="131.0" prefWidth="244.0" style="-fx-background-color: #3f51b5;" text="Current Lecture Halls" textFill="WHITE" wrapText="true">
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="57.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/Classroom.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="button_lecturers" buttonType="RAISED" contentDisplay="TOP" layoutX="191.0" layoutY="176.0" onAction="#show_current_lecturers" prefHeight="131.0" prefWidth="244.0" style="-fx-background-color: #4caf50;" text="Current Lecturers" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="57.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/person.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="button_courses_units" buttonType="RAISED" contentDisplay="TOP" layoutX="572.0" layoutY="176.0" onAction="#show_current_courses_and_units" prefHeight="131.0" prefWidth="292.0" style="-fx-background-color: #795548;" text="Current Courses &amp; Units" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="57.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/subjects.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                    </children>
+                </FlowPane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>

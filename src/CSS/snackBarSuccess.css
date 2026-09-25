@@ -1,0 +1,17 @@
+
+/* 
+    Created on : May 10, 2017, 11:19:21 PM
+    Author     : loyal
+*/
+.jfx-snackbar-content {
+    -fx-background-color:  #439a30;
+    -fx-background-radius: 20;
+}
+
+.jfx-snackbar-toast {
+    -fx-text-fill: WHITE;
+}
+
+.jfx-snackbar-action {
+    -fx-text-fill: #ff4081;
+}

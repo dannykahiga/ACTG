@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="493.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Add_DetailsController">
+    <children>
+        <StackPane fx:id="stackpane_parent" prefHeight="520.0" prefWidth="848.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <FlowPane alignment="CENTER" hgap="10.0" prefHeight="520.0" prefWidth="848.0" vgap="10.0">
+                    <children>
+                  <JFXButton fx:id="button_add_tuition_basics" buttonType="RAISED" contentDisplay="TOP" layoutX="61.0" layoutY="121.0" onAction="#add_tuition_basics" prefHeight="131.0" prefWidth="238.0" style="-fx-background-color: #4caf50;" text="Add Tuition Basics" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                     <graphic>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/general_add_.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="57.0" fitWidth="57.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/tuition.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </JFXButton>
+                        <JFXButton fx:id="button_add_department" buttonType="RAISED" contentDisplay="TOP" onAction="#add_department" prefHeight="131.0" prefWidth="238.0" style="-fx-background-color: #9c27b0;" text="Add Department" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                            <graphic>
+                        <HBox alignment="CENTER">
+                           <children>
+                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/general_add_.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="57.0" fitWidth="57.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/Department.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="button_add_lecturer" buttonType="RAISED" contentDisplay="TOP" layoutX="188.0" layoutY="145.0" onAction="#add_lecturer" prefHeight="131.0" prefWidth="244.0" style="-fx-background-color: #f44336;" text="Add Lecturer" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="57.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/add_teacher.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="button_add_class" buttonType="RAISED" contentDisplay="TOP" layoutX="315.0" layoutY="145.0" onAction="#add_lecture_hall" prefHeight="131.0" prefWidth="244.0" style="-fx-background-color: #e91e63;" text="Add Lecture Hall" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                            <graphic>
+                        <HBox alignment="CENTER">
+                           <children>
+                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/general_add_.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="57.0" fitWidth="57.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/Classroom.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="button_add_time" buttonType="RAISED" contentDisplay="TOP" layoutX="188.0" layoutY="222.0" onAction="#add_time" prefHeight="131.0" prefWidth="244.0" style="-fx-background-color: #795548;" text="Add Time" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="57.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/add_time.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="add_subjects" buttonType="RAISED" contentDisplay="TOP" layoutX="312.0" layoutY="292.0" onAction="#add_courses" prefHeight="131.0" prefWidth="244.0" style="-fx-background-color: #ff9800;" text="Add Course" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                            <graphic>
+                        <HBox alignment="CENTER">
+                           <children>
+                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/general_add_.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="57.0" fitWidth="57.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/subjects.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                            </graphic>
+                        </JFXButton>
+                    </children>
+                </FlowPane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>

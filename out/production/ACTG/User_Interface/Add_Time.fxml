@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="304.0" prefWidth="506.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Add_Time_Controller">
+    <children>
+        <BorderPane fx:id="mainPane" prefHeight="276.0" prefWidth="363.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <GridPane BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <HBox alignment="CENTER">
+                            <children>
+                                <JFXTextField fx:id="jfxtextfield_id" focusColor="#2196f3" labelFloat="true" prefHeight="6.0" prefWidth="363.0" promptText="ID" style="-fx-border-color: #2196f3; -fx-border-radius: 2; -fx-border-width: 2;" unFocusColor="WHITE" HBox.hgrow="ALWAYS">
+                                    <font>
+                                        <Font size="19.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                </JFXTextField>
+                            </children>
+                        </HBox>
+                        <VBox alignment="CENTER" prefHeight="91.0" prefWidth="383.0" style="-fx-border-color: #2196f3; -fx-border-width: 2; -fx-border-radius: 2;" GridPane.rowIndex="1">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Label text="Time(Lecture Duration)">
+                                            <font>
+                                                <Font size="19.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="timepicker_to" alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+                                    <padding>
+                                        <Insets bottom="5.0" />
+                                    </padding>
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="55.0" text="From:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker fx:id="time_picker_from" showTime="true" />
+                              <Label layoutX="126.0" layoutY="12.0" prefHeight="21.0" prefWidth="55.0" text="To:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker fx:id="time_picker_to" showTime="true" />
+                        
+                           </children>
+                                </HBox>
+                            </children>
+                            <GridPane.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </GridPane.margin>
+                        </VBox>
+                        <HBox alignment="CENTER" GridPane.rowIndex="2">
+                            <children>
+                                <JFXComboBox fx:id="jfxcombo_box_day" labelFloat="true" prefHeight="42.0" prefWidth="481.0" promptText="Day" style="-fx-font-size: 19;">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                </JFXComboBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </GridPane>
+            </center>
+            <bottom>
+                <HBox alignment="CENTER" prefHeight="49.0" prefWidth="444.0" spacing="20.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <JFXButton fx:id="button_save" buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#Save_Time_Details" prefHeight="45.0" prefWidth="126.0" style="-fx-background-color: #4caf50;" text="Save" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/ok.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="button_cancel" buttonType="RAISED" layoutX="129.0" layoutY="38.0" onAction="#Cancel" prefHeight="45.0" prefWidth="126.0" style="-fx-background-color: crimson;" text="Cancel" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Icons/cancel.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                    </children>
+                </HBox>
+            </bottom>
+            <top>
+                <JFXToolbar BorderPane.alignment="CENTER" />
+            </top>
+        </BorderPane>
+    </children>
+</AnchorPane>

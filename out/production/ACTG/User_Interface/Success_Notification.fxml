@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="270.0" prefWidth="399.0" xmlns="http://javafx.com/javafx/8.0.141"
+            fx:controller="Controllers.Success_Notification_Controller">
+    <top>
+        <JFXToolbar prefHeight="83.0" prefWidth="384.0" style="-fx-background-color: #2b8a2f;"
+                    BorderPane.alignment="CENTER">
+            <center>
+                <ImageView fitHeight="60.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true"
+                           BorderPane.alignment="CENTER">
+                    <image>
+                        <Image url="@../Icons/sentiment_satisfied_white.png"/>
+                    </image>
+                </ImageView>
+            </center>
+        </JFXToolbar>
+    </top>
+    <center>
+        <Label fx:id="info" text="Info" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="21.0"/>
+            </font>
+        </Label>
+    </center>
+    <bottom>
+        <VBox prefHeight="37.0" prefWidth="399.0" BorderPane.alignment="CENTER"/>
+    </bottom>
+</BorderPane>

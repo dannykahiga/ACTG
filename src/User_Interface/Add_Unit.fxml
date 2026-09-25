@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Add_Unit_Controller">
+   <children>
+      <BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="339.0" prefWidth="418.0">
+         <top>
+            <VBox prefHeight="26.0" prefWidth="555.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="26.0" prefWidth="600.0" style="-fx-background-color: #009688;">
+                     <children>
+                        <Label text="Unit Details" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <VBox prefHeight="292.0" prefWidth="596.0" style="-fx-border-color: #009688; -fx-border-radius: 10; -fx-border-width: 2;">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="17.0" prefWidth="406.0" style="-fx-background-color: #009688;">
+                     <children>
+                        <Label fx:id="label_unit_number" text="# " textFill="WHITE" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <GridPane VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <JFXTextField fx:id="unitIDtext" labelFloat="true" promptText="ID" unFocusColor="#009688" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" GridPane.rowIndex="1">
+                           <children>
+                              <JFXTextField fx:id="unitNameID" labelFloat="true" promptText="Name" unFocusColor="#009688" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="76.0" GridPane.rowIndex="2">
+                           <children>
+                              <JFXTextField fx:id="unitCode" labelFloat="true" promptText="Code" unFocusColor="#009688" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="142.0" GridPane.rowIndex="4">
+                           <children>
+                              <JFXComboBox fx:id="unitLecturer" labelFloat="true" onAction="#addLecturer" prefHeight="26.0" prefWidth="450.0" promptText="Lecturer" unFocusColor="#009688" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </JFXComboBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="108.0" GridPane.rowIndex="3">
+                           <children>
+                              <JFXTextField fx:id="numberOfStudents" labelFloat="true" promptText="Number of Students" unFocusColor="#009688" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <bottom>
+            <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="418.0" spacing="15.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="lecturerID" />
+                  <TextField fx:id="textLecturer" />
+                  <JFXButton fx:id="buttonAddUnit" buttonType="RAISED" layoutX="530.0" layoutY="17.0" onAction="#addUnit" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #3f51b5; -fx-background-radius: 50;" text="+" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</StackPane>

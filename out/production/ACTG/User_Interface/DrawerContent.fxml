@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" prefHeight="472.0" prefWidth="217.0"
+            style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/8.0.141"
+            fx:controller="Controllers.DrawerContentController">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="48.0" layoutY="52.0" prefHeight="480.0" prefWidth="260.0"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="120.0" prefWidth="217.0">
+                    <children>
+                        <Pane fx:id="pane_add_details" prefHeight="120.0" prefWidth="70.0"
+                              style="-fx-background-color: #4caf50;" visible="false"/>
+                        <JFXButton fx:id="button_add_details" contentDisplay="TOP" onAction="#addDetails"
+                                   prefHeight="120.0" prefWidth="264.0" text="Add Details" textFill="WHITE"
+                                   HBox.hgrow="ALWAYS">
+                            <graphic>
+                                <ImageView fitHeight="57.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="/Icons/add_details.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                    </children>
+                </HBox>
+                <HBox>
+                    <children>
+                        <Pane fx:id="pane_timetable_optns" prefHeight="120.0" prefWidth="70.0"
+                              style="-fx-background-color: #4caf50;" visible="false"/>
+                        <JFXButton fx:id="button_timetable_optns" contentDisplay="TOP" onAction="#timetableOptions"
+                                   prefHeight="120.0" prefWidth="264.0" text="Timetable Options" textFill="WHITE"
+                                   HBox.hgrow="ALWAYS">
+                            <graphic>
+                                <ImageView fitHeight="57.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="/Icons/timetable_options.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                    </children>
+                </HBox>
+                <HBox>
+                    <children>
+                        <Pane fx:id="pane_database" prefHeight="120.0" prefWidth="70.0"
+                              style="-fx-background-color: #4caf50;" visible="false" HBox.hgrow="ALWAYS"/>
+                        <JFXButton fx:id="button_database" contentDisplay="TOP" onAction="#go_to_database"
+                                   prefHeight="120.0" prefWidth="264.0" text="Database" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="57.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="/Icons/database.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="250.0">
+                    <children>
+                        <Pane fx:id="pane_quit_app" prefHeight="120.0" prefWidth="70.0"
+                              style="-fx-background-color: #4caf50;" visible="false" HBox.hgrow="ALWAYS"/>
+                        <JFXButton fx:id="button_exit_app" contentDisplay="TOP" onAction="#quit_app" prefHeight="120.0"
+                                   prefWidth="264.0" text="Exit Application" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="57.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@/Icons/exit_app.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

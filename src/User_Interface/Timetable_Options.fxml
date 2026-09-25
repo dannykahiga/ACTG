@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Timetable_OptionsController">
+    <children>
+      <StackPane fx:id="stackpane_parent" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+              <FlowPane alignment="CENTER" hgap="10.0" prefHeight="400.0" prefWidth="600.0" vgap="10.0">
+                  <children>
+                      <JFXButton fx:id="button_generate_timetable" buttonType="RAISED" contentDisplay="TOP" onAction="#Generate_Timetable" prefHeight="131.0" prefWidth="238.0" style="-fx-background-color: #009688;" text="Generate Timetable" textFill="WHITE">
+                          <font>
+                              <Font name="System Bold" size="19.0" />
+                          </font>
+                     <graphic>
+                        <ImageView fitHeight="57.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/Generate.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                      </JFXButton>
+                      <HBox fx:id="hbox_view_timetable">
+                          <children>
+                              <JFXButton fx:id="button_view_timetable" buttonType="RAISED" contentDisplay="TOP" prefHeight="131.0" prefWidth="238.0" style="-fx-background-color: #3f51b5;" text="View Timetable" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                  <font>
+                                      <Font name="System Bold" size="19.0" />
+                                  </font>
+                                  <graphic>
+                                      <ImageView fitHeight="57.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                              <Image url="@../Icons/view_timetable.png" />
+                                          </image>
+                                      </ImageView>
+                                  </graphic>
+                              </JFXButton>
+                          </children>
+                      </HBox>
+                  </children>
+              </FlowPane>
+         </children>
+      </StackPane>
+    </children>
+</AnchorPane>
